@@ -60,7 +60,10 @@ export const RevenueChart = ({
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' 
               }}
-              formatter={(value: number) => [`${value.toLocaleString()} SAR`, 'الإيراد']}
+              formatter={(value) => {
+                const num = typeof value === 'number' ? value : Number(value || 0);
+                return [`${num.toLocaleString()} SAR`, 'الإيراد'];
+              }}
             />
             <Area 
               type="monotone" 

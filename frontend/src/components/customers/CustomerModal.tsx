@@ -240,7 +240,6 @@ export function CustomerModal({ isOpen, onClose, onSuccess, customerToEdit }: Cu
                           }}
                         >
                           <span className="flex items-center gap-2">
-                            <span className="text-lg">{country.flag}</span>
                             <span>{country.name_ar}</span>
                           </span>
                           {formData.nationality === country.name_ar && <Check size={16} className="text-blue-600" />}

@@ -63,7 +63,7 @@ export const ConfirmStep: React.FC<ConfirmStepProps> = ({ data, onSuccess, onBac
           booking_id: booking.id,
           unit_id: data.unit?.id || null,
           customer_id: data.customer.id,
-          hotel_id: data.unitType?.hotel_id || null,
+          hotel_id: data.unit?.hotel_id || null,
           message,
           payload: {
             check_in: format(data.startDate, 'yyyy-MM-dd'),

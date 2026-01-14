@@ -47,6 +47,9 @@ interface UserProfile {
   id: string;
   email: string;
   full_name?: string;
+  user_metadata?: {
+    full_name?: string;
+  } | null;
 }
 
 interface CleaningLog {
@@ -289,7 +292,7 @@ export default function CleaningPage() {
               confirmed_by: currentUser.id, 
               confirmed_at: new Date().toISOString(),
               photo_data: undefined,
-              confirmer_name: currentUser.user_metadata?.full_name || currentUser.email || 'أنا'
+              confirmer_name: currentUser.full_name || currentUser.email || 'أنا'
             } 
           : l
       ));

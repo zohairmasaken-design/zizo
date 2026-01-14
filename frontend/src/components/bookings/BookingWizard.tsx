@@ -17,6 +17,7 @@ export interface Unit {
   floor: string;
   status: string;
   unit_type_id: string;
+  hotel_id?: string;
 }
 
 export interface BookingData {
